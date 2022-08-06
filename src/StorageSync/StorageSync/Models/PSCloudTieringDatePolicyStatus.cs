@@ -1,4 +1,4 @@
-﻿// ----------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
 //
 // Copyright Microsoft Corporation
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,9 +17,9 @@ namespace Microsoft.Azure.Commands.StorageSync.Models
     using System;
 
     /// <summary>
-    /// Class PSCloudTieringCachePerformance.
+    /// Class PSCloudTieringDatePolicyStatus.
     /// </summary>
-    public class PSCloudTieringCachePerformance
+    public class PSCloudTieringDatePolicyStatus
     {
         /// <summary>
         /// Gets or sets the last updated timestamp.
@@ -28,21 +28,9 @@ namespace Microsoft.Azure.Commands.StorageSync.Models
         public DateTime? LastUpdatedTimestamp { get; set; }
 
         /// <summary>
-        /// Gets or sets the count of bytes served locally from the cache.
+        /// Gets or sets the most recent time of tiered files.
         /// </summary>
-        /// <value>The count of bytes served locally from the cache.</value>
-        public long? CacheHitBytes { get; set; }
-
-        /// <summary>
-        /// Gets or sets the count of bytes served from recall.
-        /// </summary>
-        /// <value>The count of bytes served from recall.</value>
-        public long? CacheMissBytes { get; set; }
-
-        /// <summary>
-        /// Gets or sets the cache hit percentage.
-        /// </summary>
-        /// <value>The cache hit percentage.</value>
-        public int? CacheHitBytesPercent { get; set; }
+        /// <value>The most recent access time of tiered files.</value>
+        public DateTime? TieredFilesMostRecentAccessTimestamp { get; set; }
     }
 }
